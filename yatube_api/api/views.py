@@ -17,12 +17,10 @@ class PerformUpdateDestroyViewSet(viewsets.ModelViewSet):
     def destroy(self, request, pk=None, *args, **kwargs):
         if self.get_object().author != self.request.user:
             return Response(status=status.HTTP_403_FORBIDDEN)
-        return super(PerformUpdateDestroyViewSet, self).destroy(
-            request,
-            pk,
-            *args,
-            **kwargs,
-        )
+        return super(
+            PerformUpdateDestroyViewSet,
+            self
+        ).destroy(request, pk, *args, **kwargs)
 
 
 class PostViewSet(PerformUpdateDestroyViewSet):
