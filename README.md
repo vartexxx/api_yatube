@@ -1,2 +1,1 @@
-# api_yatube
-api_yatube
+# Проект Яндекс Практикум Django DRF
